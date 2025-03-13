@@ -12,13 +12,27 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
+      - name: Checkout Repository Main
         uses: actions/checkout@v3
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy to Main
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           branch: main     # Deploys to main
           folder: .    # Deploy the root directory
 
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository GitHub Pages
+        uses: actions/checkout@v3
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages   # Deploys to gh-pages
+          folder: .  # Deploys to gh-pages as well
