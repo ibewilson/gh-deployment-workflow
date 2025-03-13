@@ -1,3 +1,4 @@
+
 # GitHub Pages Deployment
 
 ## Project Overview
@@ -21,27 +22,25 @@ In bash:
 git clone https://github.com/ibewilson/gh-deployment-workflow.git
 cd gh-deployment-workflow
 
-### 2️ Install Jekyll & Dependencies
+### 2. Install Jekyll & Dependencies
 
 gem install jekyll bundler
 bundle install
 
-### 3️. Run Locally
+### 3. Run Locally
 
 bundle exec jekyll serve
 Open http://127.0.0.1:4000 in your browser.
 
 ## Deployment to GitHub Pages
 
-### 1️. Ensure GitHub Pages is set to deploy from the main branch.
-
-### 2️. Commit & push changes:
-
+### 1. Ensure GitHub Pages is set to deploy from the main branch.
+### 2. Commit & push changes:
 git add .
 git commit -m "Updated Jekyll site"
 git push origin main
-
-### 3️. Your site is live at: https://ibewilson.github.io/gh-deployment-workflow
+### 3. Your site is live at:
+https://ibewilson.github.io/gh-deployment-workflow
 
 ## Author
 
@@ -51,4 +50,3 @@ https://github.com/ibewilson
 ## License
 
 This project is open-source under the MIT License.
-
