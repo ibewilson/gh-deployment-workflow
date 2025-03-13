@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main
+      - main   # Should deploy when main branch is updated
     paths:
       - "index.html"
 
@@ -19,6 +19,6 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          branch: gh-pages
-          folder: .
+          branch: main     # Deploys to main
+          folder: .    # Deploy the root directory
 
